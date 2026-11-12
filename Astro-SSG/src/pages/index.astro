@@ -1,3 +1,4 @@
 ---
-return Astro.redirect("/users");
+const baseUrl = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+return Astro.redirect(`${baseUrl}users`);
 ---
